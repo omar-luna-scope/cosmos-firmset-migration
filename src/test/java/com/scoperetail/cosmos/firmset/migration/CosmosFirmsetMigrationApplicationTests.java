@@ -1,0 +1,13 @@
+package com.scoperetail.cosmos.firmset.migration;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+class CosmosFirmsetMigrationApplicationTests {
+
+	@Test
+	void contextLoads() {
+	}
+
+}

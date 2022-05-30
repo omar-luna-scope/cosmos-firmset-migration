@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.scoperetail.pom</groupId>
+		<artifactId>corp-parent-pom</artifactId>
+		<version>1.12</version>
+		<relativePath />
+	</parent>
+
+	<groupId>com.scoperetail.cosmos</groupId>
+	<artifactId>cosmos-firmset-migration</artifactId>
+	<version>0.1-SNAPSHOT</version>
+	<name>cosmos-firmset-migration</name>
+	<description>Cosmos Firm Set Orders Migration</description>
+
+	<properties>
+		<cosmos.internal.bom.version>3.36</cosmos.internal.bom.version>
+		<cosmos.external.bom.version>1.26</cosmos.external.bom.version>
+	</properties>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-dependencies</artifactId>
+				<version>${spring-boot.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+			<dependency>
+				<groupId>com.scoperetail.bom</groupId>
+				<artifactId>cosmos-bom-internal</artifactId>
+				<version>${cosmos.internal.bom.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+			<dependency>
+				<groupId>com.scoperetail.bom</groupId>
+				<artifactId>cosmos-bom-external</artifactId>
+				<version>${cosmos.external.bom.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.scoperetail.cosmos</groupId>
+			<artifactId>cosmos-commons-messaging-outbound-impl-kafka</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.scoperetail.cosmos</groupId>
+			<artifactId>cosmos-commons-message-schema</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.scoperetail.commons</groupId>
+			<artifactId>commons-dsproxy</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.scoperetail</groupId>
+			<artifactId>commons-base</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter</artifactId>
+			<exclusions>
+				<exclusion>
+					<groupId>org.springframework.boot</groupId>
+					<artifactId>spring-boot-starter-logging</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<optional>true</optional>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.microsoft.sqlserver</groupId>
+			<artifactId>mssql-jdbc</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-config</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-bootstrap</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-log4j2</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-batch</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+		</dependency>
+	</dependencies>
+
+</project>
