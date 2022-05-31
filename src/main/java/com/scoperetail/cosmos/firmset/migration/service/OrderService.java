@@ -9,8 +9,4 @@ import java.util.List;
 public class OrderService {
     @Autowired
     SupplierOrderRepo supplierOrderRepo;
-
-    public List<OrderResponse> getAllFrimSetOrders(){
-        return supplierOrderRepo.getAllFirmSetOrders();
-    }
 }

@@ -1,6 +1,7 @@
 package com.scoperetail.cosmos.firmset.migration.repository;
 
 import com.scoperetail.cosmos.firmset.migration.dto.OrderResponse;
+import com.scoperetail.cosmos.firmset.migration.model.SupplierOrder;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;

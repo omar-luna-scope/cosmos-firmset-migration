@@ -2,25 +2,25 @@ package com.scoperetail.cosmos.firmset.migration.dto;
 
 import lombok.*;
 
+import java.sql.Timestamp;
+
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Getter
-@Setter
-@Data
 public class OrderResponse {
     //orderHeader
-    Long srcOrderId;
-    String srcOrderCreateTimestamp;
-    String orderTypeCode;
-    Character orderHoldForFuture;
+    String src_order_id;
+    Timestamp srcOrderCreateTimestamp;
+    Integer orderTypeID;
+    String orderHoldForFuture;
     Integer routeId;
     Integer routeCode;
     Integer stopId;
     String comment;
     Integer srcOrderId2;
-    Integer supplierIds;
-    Character notifyInd;
-    Character skipRouting;
+    String supplierIds;
+    String notifyInd;
+    String skipRouting;
     String sosMode;
 
     //lines
